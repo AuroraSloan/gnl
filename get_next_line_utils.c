@@ -4,7 +4,7 @@ size_t	ft_strlen(char *s)
 {
 	size_t	i;
 
-	if (s = NULL)
+	if (s == NULL)
 		return (0);
 	i = 0;
 	while (s[i])
@@ -35,7 +35,7 @@ char	*ft_strdup(char *s1)
 	int j;
 
 	j = 0;
-	i = str == NULL ? 0 : ft_strlen(str);
+	i = s1 == NULL ? 0 : ft_strlen(s1);
 	if (!(dst = (char*)malloc(sizeof(*dst) * ft_strlen(s1) + 1)))
 		return (NULL);
 	while (j < i)
