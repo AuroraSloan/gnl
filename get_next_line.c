@@ -62,13 +62,18 @@ static int	make_new_line(int fd, char **line, char **s_arr, int ret)
 {
 	char	*tmp;
 	size_t	len;
+	int	flag;
 
-	len = s_arr[fd][0] == '\n' ? 1 : ft_strchr_len(s_arr[fd], '\n') + 1;
+	flag = 1;
+	len = s_arr[fd][0] == '\n' ? 0 : ft_strchr_len(s_arr[fd], '\n');
 	if (!ft_strchr_len(s_arr[fd], '\n'))
+	{
 		len = ft_strlen(s_arr[fd]);
+		flag--;
+	}
 	if (!(*line = ft_substr(s_arr[fd], 0, len)))
 		return (err_free1(s_arr[fd]));
-	if (!(tmp = ft_strdup(s_arr[fd] + len)))
+	if (!(tmp = ft_strdup(s_arr[fd] + len + flag)))
 		return (err_free1(s_arr[fd]));
 	free(s_arr[fd]);
 	if (!(s_arr[fd] = ft_strdup(tmp)))
