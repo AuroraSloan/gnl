@@ -99,7 +99,7 @@ int	get_next_line(int fd, char **line)
 	if (ret == 0 && !s_arr[fd])
 	{
 		if (!(s_arr[fd] = ft_strdup("")))
-		return (-1);
+			return (-1);
 	}
 	ret = make_new_line(fd, line, s_arr, ret);
 	if (ret == 0)
