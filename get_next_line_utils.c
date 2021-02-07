@@ -10,7 +10,7 @@ size_t	ft_strlen(char *s)
 	return (i);
 }
 
-int	*ft_strchr_len(char *s, int c)
+size_t	*ft_strchr_len(char *s, int c)
 {
 	size_t i;
 
