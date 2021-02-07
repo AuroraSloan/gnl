@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include "get_next_line.h"
 
-static int	err_free1(char *s1)
+static int	err_free1(const char *s1)
 {
 	if (s1)
 	{
@@ -14,7 +14,7 @@ static int	err_free1(char *s1)
 	return (-1);
 }
 
-static int	err_free2(char *s1, char *s2)
+static int	err_free2(const char *s1, const char *s2)
 {
 	if (s1)
 	{
@@ -29,7 +29,7 @@ static int	err_free2(char *s1, char *s2)
 	return (-1);
 }
 
-static int	buffer_flow(int fd, char **s_arr)
+static int	buffer_flow(int fd, const char **s_arr)
 {
 	ssize_t	ret;
 	const char	*buf;
@@ -58,7 +58,7 @@ static int	buffer_flow(int fd, char **s_arr)
 	return (ret);
 }
 
-static int	make_new_line(int fd, char **line, char **s_arr, int ret)
+static int	make_new_line(int fd, char **line, const char **s_arr, int ret)
 {
 	const char	*tmp;
 	size_t	len;
