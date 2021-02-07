@@ -91,14 +91,11 @@ int	get_next_line(int fd, char **line)
 	if (!line || fd < 0 || fd > OPEN_MAX || BUFFER_SIZE < 1)
 		return (-1);
 	if (!s_arr[fd] || ft_strchr_len(s_arr[fd], '\n') == 0)
-		ret = buffer_flow(fd, s_arr);
-	if (ret == -1)
-		return (-1);
+		if ((ret = buffer_flow(fd, s_arr)) == -1)
+			return (-1);
 	if (ret == 0 && !s_arr[fd])
-	{
 		if (!(s_arr[fd] = ft_strdup("")))
 			return (-1);
-	}
 	ret = make_new_line(fd, line, s_arr, ret);
 	if (ret == 0)
 	{
