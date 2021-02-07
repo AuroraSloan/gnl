@@ -4,6 +4,8 @@ size_t	ft_strlen(char *s)
 {
 	size_t	i;
 
+	if (s = NULL)
+		return (0);
 	i = 0;
 	while (s[i])
 		i++;
@@ -30,16 +32,18 @@ char	*ft_strdup(char *s1)
 {
 	char	*dst;
 	int	i;
+	int j;
 
+	j = 0;
+	i = str == NULL ? 0 : ft_strlen(str);
 	if (!(dst = (char*)malloc(sizeof(*dst) * ft_strlen(s1) + 1)))
 		return (NULL);
-	i = 0;
-	while (s1[i])
+	while (j < i)
 	{
-		dst[i] = s1[i];
-		i++;
+		dst[j] = s1[j];
+		j++;
 	}
-	dst[i] = '\0';
+	dst[j] = '\0';
 	return (dst);
 }
 
@@ -51,7 +55,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	char	*join;
 
 	if (!s1 || !s2)
-		return ((char*)s1);
+		return (s1);
 	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!(join = (char *)malloc(sizeof(*join) * len + 1)))
 		return (NULL);
