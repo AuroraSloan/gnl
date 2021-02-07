@@ -12,7 +12,7 @@ size_t	ft_strlen(const char *s)
 
 char	*ft_strchr_len(const char *s, int c)
 {
-	char	*ret;
+	size_t i;
 
 	if (s[0] == (char)c)
 		return (1);
