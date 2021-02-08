@@ -6,5 +6,26 @@ Global variables were not allowed for this project. The only functions allowed w
 Standard library functions were recoded and modified for this project.
 
 ## Installation
+```bash
+https://github.com/AuroraSloan/gnl.git
+```
 
 ## Usage
+First, run the comp2.sh file.
+```bash
+bash comp.sh
+```
+
+next simply use the executable gnl along with the file/s you want to read.
+```bash
+./gnl a.txt
+```
+or
+```bash
+./gnl a.txt b.txt
+```
+If more than one file is to be read, the program will automatically read only the first line from each file at a time.<br>If you would like to read a whole file at a time, open the .sh file and change ```lblmain.c``` to ```fbfmain.c```.
+
+To change the buffer size, open the .sh file and change the number in ```BUFFER_SIZE=32``` to any number 0 to 2147483647.
+
+If no file is specified, the program will begin to read from stdin. Type Ctrl + d to signal the end of file.
