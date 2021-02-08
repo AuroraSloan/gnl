@@ -5,12 +5,12 @@ Global variables were not allowed for this project. The only functions allowed w
 
 Standard library functions were recoded and modified for this project.
 
-## Installation
+### Installation
 ```bash
 https://github.com/AuroraSloan/gnl.git
 ```
 
-## Usage
+### Usage
 First, run the comp2.sh file.
 ```bash
 bash comp.sh
