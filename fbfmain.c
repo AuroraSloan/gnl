@@ -10,7 +10,7 @@ int	main(int argc, char **argv)
 
 	line = NULL;
 	first_fd = fd - limit;
-	last_fd = (fd_start + limit - 1); 
+	last_fd = (first_fd + limit - 1); 
 	while (argc-- > 1)
 	{
 		if ((fd = open(argv[i++], O_RDONLY)) == -1) 
