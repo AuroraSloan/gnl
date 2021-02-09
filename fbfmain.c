@@ -9,8 +9,6 @@ int	main(int argc, char **argv)
 	char	*line;
 
 	line = NULL;
-	first_fd = fd - limit;
-	last_fd = (first_fd + limit - 1); 
 	while (argc-- > 1)
 	{
 		if ((fd = open(argv[i++], O_RDONLY)) == -1) 
@@ -22,6 +20,8 @@ int	main(int argc, char **argv)
 		}
 		fd++;
 	}
+	first_fd = fd - limit;
+	last_fd = (first_fd + limit - 1);
 	if (fd == 0)
 	{
 		while ((ret = get_next_line(fd, &line)) > 0)
