@@ -13,7 +13,7 @@ int	main(int argc, char **argv)
 	{
 		if ((fd = open(argv[i++], O_RDONLY)) == -1) 
 		{
-			printf("file #%d could not be opened\n", fd);
+			printf("file #%d could not be opened\n", i);
 			while (fd-- > 1)
 				close(fd);
 			return (0);
