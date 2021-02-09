@@ -12,11 +12,14 @@ https://github.com/AuroraSloan/gnl.git
 ```
 
 ### Usage
-First, run the comp2.sh file.
+First, run the comp.sh file.
 ```bash
 bash comp.sh
 ```
-
+The program will automatically read the whole file before moving to the next file.<br>If you want to read one line at a time from each file, run the comp.sh file with -f.
+```bash
+bash comp.sh -f
+```
 next simply use the executable gnl along with the file/s you want to read.
 ```bash
 ./gnl a.txt
@@ -25,8 +28,9 @@ or
 ```bash
 ./gnl a.txt b.txt
 ```
-If more than one file is to be read, the program will automatically read only the first line from each file at a time.<br>If you would like to read a whole file at a time, open the .sh file and change ```lblmain.c``` to ```fbfmain.c```.
-
-To change the buffer size, open the .sh file and change the number in ```BUFFER_SIZE=32``` to any number 0 to 2147483647.
-
 If no file is specified, the program will begin to read from stdin. Type Ctrl + d to signal the end of file.
+
+To change the buffer size, open the .sh file and change the number in ```BUFF=32``` to any number 1 to 2147483647.
+
+#### Coming soon...
+Ability to choose which line will be read from a file.
