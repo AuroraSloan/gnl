@@ -16,9 +16,9 @@ First, run the comp.sh file.
 ```bash
 bash comp.sh
 ```
-The program will automatically read the whole file before moving to the next file.<br>If you want to read one line at a time from each file, run the comp.sh file with -f.
+The program will automatically read the whole file before moving to the next file.<br>If you want to read one line at a time from each file, run the comp.sh file with -ll.
 ```bash
-bash comp.sh -f
+bash comp.sh -ll
 ```
 next simply use the executable gnl along with the file/s you want to read.
 ```bash
