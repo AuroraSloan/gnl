@@ -10,7 +10,7 @@ Standard library functions were recoded and modified for this project.
 ----
 ### Installation
 ```bash
-https://github.com/AuroraSloan/gnl.git
+git clone https://github.com/AuroraSloan/gnl.git
 ```
 
 ### Usage
