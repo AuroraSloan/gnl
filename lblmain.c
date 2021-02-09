@@ -6,7 +6,7 @@
 int	main(int argc, char **argv)
 {
 	int	ret = 0, fd = 0, line_num = 1, limit = argc - 1, i = 1,
-	first_fd, last_fd;
+		first_fd, last_fd;
 	char	*line;
 
 	line = NULL;
