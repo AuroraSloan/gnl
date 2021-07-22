@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "get_next_line.h"
+#include "libft/libft.h"
 #include <fcntl.h>
 #include <unistd.h>
 
@@ -28,6 +29,7 @@ int	main(int argc, char **argv)
 		{
 			printf("fd: %d Line: %d ret: %d| %s\n", fd, line_num++, ret, line);
 			free(line);
+			line = NULL;
 		}
 	}
 	else
@@ -46,6 +48,7 @@ int	main(int argc, char **argv)
 				{
 					printf("fd: %d Line: %d ret: %d| %s\n", fd, line_num++, ret, line);
 					free(line);
+					line = NULL;
 				}
 			}
 			close(fd);
@@ -54,6 +57,7 @@ int	main(int argc, char **argv)
 	}
 	printf("fd: %d Line: %d ret: %d| %s\n", fd, line_num++, ret, line);
 	free(line);
+	line = NULL;
 	close(fd);
 	return (0);
 }
